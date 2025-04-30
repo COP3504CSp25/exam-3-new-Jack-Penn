@@ -14,6 +14,7 @@ float consultMax(const std::string& search_term, const std::map<std::string, std
         if(num > max)
             max = num;
     }
+    return max;
 }
 
 std::map<std::string, float> returnMaxMap(const std::map<std::string, std::vector<float>>& in_map) {
