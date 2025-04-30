@@ -15,6 +15,22 @@ public:
 
     int* getStats() const{
         //write your function here!
+        int max = head->data;
+        int min = head->data;
+        int sum = 0;
+        int size = 0;
+
+        Node* temp = head;
+        while(temp != nullptr) {
+            if(temp->data < min)
+                min = temp->data;
+            if(temp->data > max)
+                max = temp->data;
+            sum += temp->data;
+            size++;
+            temp = temp->next;
+        }
+        return new int[3]{min, max, sum/size};
     }
     
 
