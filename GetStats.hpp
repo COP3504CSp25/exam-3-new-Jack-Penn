@@ -13,8 +13,10 @@ public:
         head = newNode;
     }
 
-    int* getStats() const{
-        //write your function here!
+    int* getStats() const {
+        if(head == nullptr)
+            return new int[3]{0,0,0};
+
         int max = head->data;
         int min = head->data;
         int sum = 0;
